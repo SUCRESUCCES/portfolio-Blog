@@ -19,7 +19,7 @@ function AboutPage() {
             </tr>
             <tr>
               <td className="about-label">주소</td>
-              <td>경기도 파주시 정담길 123, 103-1002(경신아파트)</td>
+              <td>경기도 파주시</td>
             </tr>
             <tr>
               <td className="about-label">깃허브</td>
