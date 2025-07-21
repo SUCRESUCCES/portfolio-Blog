@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { path: "/", label: "메인" },
   { path: "/about", label: "소개" },
   { path: "/resume", label: "이력" },
   { path: "/projects", label: "프로젝트" },
