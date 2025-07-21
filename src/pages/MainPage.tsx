@@ -7,7 +7,7 @@ function MainPage() {
       <h1 className="main-title">
         안녕하세요!
         <br />
-        신입 풀스택 개발자 조민주입니다.
+        신입 개발자 조민주입니다.
       </h1>
       <p className="main-desc">
         책임감과 실행력으로 사용자 중심의 서비스를 만듭니다.
