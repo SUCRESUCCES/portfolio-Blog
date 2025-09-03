@@ -6,13 +6,20 @@
 방문해주셔서 감사합니다!
 
 ---
-
+<br />
 <br />
 
-🔗 배포 주소
-[https://minjoo-portfolio.vercel.app/](https://minjoo-portfolio.vercel.app/)
+
+🔗 배포  
+
+<a href="https://minjoo-portfolio.vercel.app/">
+  <img src="https://minjoo-portfolio.vercel.app/thumbnail.png" alt="포트폴리오 썸네일" width="400px" />
+</a>
 
 <br />
+<br />
+<br />
+
 
 🚀 주요 기능
 👤 About Me: 저의 소개와 가치관, 그리고 연락할 수 있는 정보들을 확인할 수 있습니다.
