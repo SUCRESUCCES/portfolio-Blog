@@ -1,5 +1,3 @@
-// src/pages/ResumePage.tsx
-
 import React from "react";
 import ResumeCard from "../components/resume/ResumeCard";
 

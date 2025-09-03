@@ -17,7 +17,7 @@ function ProjectsPage() {
   return (
     <section className="w-full max-w-6xl mx-auto py-12 px-4">
       <h2 className="text-4xl font-extrabold text-gray-900 mb-10 text-center">
-        프로젝트
+        PROJECT
       </h2>
 
       <ProjectList onCardClick={handleCardClick} />

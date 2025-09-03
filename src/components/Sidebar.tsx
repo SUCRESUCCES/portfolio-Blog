@@ -14,9 +14,9 @@ function Sidebar() {
   return (
     <aside
       className="
-      w-64 h-screen fixed top-0 right-0 z-40  
-      bg-white border-l border-gray-200       
-      p-8 flex flex-col items-end             
+      w-64 h-screen fixed top-0 right-0 z-40
+      p-8 flex flex-col
+      hidden xl:flex
     "
     >
       <div className="mb-12 text-right">
@@ -24,14 +24,14 @@ function Sidebar() {
           to="home"
           smooth={true}
           duration={500}
-          className="text-2xl font-black text-gray-800 cursor-pointer"
+          className="text-2xl font-black text-gray-800 cursor-pointer hover:text-primary transition-colors"
         >
-          Minjoo Cho
+          minjoo's Blog
         </Link>
         <p className="text-sm text-gray-500 mt-2">Frontend Developer</p>
       </div>
 
-      <nav className="flex flex-col gap-y-4 items-end">
+      <nav className="my-auto flex flex-col gap-y-4 items-end">
         {navItems.map((item) => (
           <Link
             key={item.to}

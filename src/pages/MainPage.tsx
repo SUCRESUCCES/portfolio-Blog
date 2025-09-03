@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+
 import Profile from "../components/main/Profile";
 import AboutCard from "../components/about/AboutCard";
 import ResumeCard from "../components/resume/ResumeCard";
 import ProjectList from "../components/projects/ProjectList";
-import ProjectDetailModal from "../components/projects/ProjectDetailModal"; // 모달 컴포넌트 import
+import ProjectDetailModal from "../components/projects/ProjectDetailModal";
 import { Project } from "../data/Project";
 
 function MainPage() {
@@ -18,35 +19,35 @@ function MainPage() {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <section
-        id="home"
-        className="w-full flex justify-center items-center py-12 px-4"
-      >
-        <Profile />
+    <div>
+      <section id="home" className="w-full flex justify-center py-20 px-4">
+        <div className="w-full max-w-3xl mx-auto">
+          <Profile />
+        </div>
       </section>
 
       <section
         id="about"
-        className="w-full flex justify-center items-center py-12 px-4 bg-gray-50"
+        className="w-full flex justify-center py-20 px-4 bg-gray-50"
       >
-        <AboutCard />
+        <div className="w-full max-w-3xl mx-auto">
+          <AboutCard />
+        </div>
       </section>
 
-      <section
-        id="resume"
-        className="w-full flex justify-center py-12 px-4 bg-gray-50"
-      >
-        <ResumeCard />
+      <section id="resume" className="w-full flex justify-center py-20 px-4">
+        <div className="w-full max-w-3xl mx-auto">
+          <ResumeCard />
+        </div>
       </section>
 
       <section
         id="projects"
-        className="w-full flex justify-center py-12 px-4 bg-gray-50"
+        className="w-full flex justify-center py-20 px-4 bg-gray-50"
       >
-        <div className="w-full max-w-6xl">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-10 text-center">
-            프로젝트
+        <div className="w-full max-w-5xl mx-auto">
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-12 text-center">
+            Projects
           </h2>
 
           <ProjectList onCardClick={handleCardClick} />
