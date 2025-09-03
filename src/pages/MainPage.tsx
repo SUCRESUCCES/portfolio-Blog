@@ -1,31 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
+import Profile from "../components/main/Profile";
+import AboutCard from "../components/about/AboutCard";
+import ResumeCard from "../components/resume/ResumeCard";
+import ProjectList from "../components/projects/ProjectList";
+import ProjectDetailModal from "../components/projects/ProjectDetailModal"; // 모달 컴포넌트 import
+import { Project } from "../data/Project";
 
 function MainPage() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const handleCardClick = (project: Project) => {
+    setSelectedProject(project);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
-    <section className="main-section">
-      <img src="/profile.jpg" alt="profile" className="main-profile-img" />
-      <h1 className="main-title">
-        안녕하세요!
-        <br />
-        신입 개발자 조민주입니다.
-      </h1>
-      <p className="main-desc">
-        책임감과 실행력으로 사용자 중심의 서비스를 만듭니다.
-        <br />
-        저의 포트폴리오 블로그에 방문해주셔서 감사합니다.
-      </p>
-      <div style={{ marginTop: 40 }}>
-        <img
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=SUCRESUCCES&layout=compact&theme=default"
-          alt="github top languages"
-          style={{
-            maxWidth: "100%",
-            borderRadius: 12,
-            boxShadow: "0 2px 8px #e0e0e0",
-          }}
+    <div className="flex flex-col items-center">
+      <section
+        id="home"
+        className="w-full flex justify-center items-center py-12 px-4"
+      >
+        <Profile />
+      </section>
+
+      <section
+        id="about"
+        className="w-full flex justify-center items-center py-12 px-4 bg-gray-50"
+      >
+        <AboutCard />
+      </section>
+
+      <section
+        id="resume"
+        className="w-full flex justify-center py-12 px-4 bg-gray-50"
+      >
+        <ResumeCard />
+      </section>
+
+      <section
+        id="projects"
+        className="w-full flex justify-center py-12 px-4 bg-gray-50"
+      >
+        <div className="w-full max-w-6xl">
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-10 text-center">
+            프로젝트
+          </h2>
+
+          <ProjectList onCardClick={handleCardClick} />
+        </div>
+      </section>
+
+      {selectedProject && (
+        <ProjectDetailModal
+          project={selectedProject}
+          onClose={handleCloseModal}
         />
-      </div>
-    </section>
+      )}
+    </div>
   );
 }
 
