@@ -10,7 +10,7 @@
 <br />
 
 🔗 배포 주소
-https://minjoo-portfolio.vercel.app/
+[https://minjoo-portfolio.vercel.app/](https://minjoo-portfolio.vercel.app/)
 
 <br />
 
