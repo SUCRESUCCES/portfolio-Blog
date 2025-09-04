@@ -1,14 +1,16 @@
-import React from "react";
+"use client";
 
+import React from "react";
+import ThreeCanvas from "../ThreeCanvas";
 function Profile() {
   return (
     <div className="w-full text-center mt-10 flex flex-col items-center">
-      <img
+      {/* <img
         src="/profile.jpg"
         alt="profile"
         className="w-28 h-28 rounded-full mb-7 shadow-lg object-cover"
-      />
-
+      /> */}
+      <ThreeCanvas className="relative w-[400px] h-[400px] rounded-full mb-7 shadow-lg" />
       <h1 className="text-4xl font-extrabold mb-4 text-gray-800 tracking-tight leading-tight">
         안녕하세요!
         <br />
