@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 
 import Profile from "../components/main/Profile";
@@ -6,6 +8,10 @@ import ResumeCard from "../components/resume/ResumeCard";
 import ProjectList from "../components/projects/ProjectList";
 import ProjectDetailModal from "../components/projects/ProjectDetailModal";
 import { Project } from "../data/Project";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 function MainPage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);

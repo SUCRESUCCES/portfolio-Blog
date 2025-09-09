@@ -8,10 +8,9 @@ interface ProjectCardProps {
 
 function ProjectCard({ project, onCardClick }: ProjectCardProps) {
   return (
-    // div를 button으로 바꾸고 onClick 이벤트 추가
     <button
       onClick={() => onCardClick(project)}
-      className="block w-full max-w-sm text-left" // text-left 추가
+      className="block w-full max-w-sm text-left"
     >
       <div className="bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
         {project.imgUrl ? (

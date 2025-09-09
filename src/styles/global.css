@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.mySwiper {
+  --swiper-navigation-color: #000;
+  --swiper-pagination-color: #000;
+}
+
+.dark .mySwiper {
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-color: #fff;
+}
