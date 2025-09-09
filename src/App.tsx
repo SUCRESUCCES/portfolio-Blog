@@ -6,6 +6,13 @@ import MobileMenuModal from "./components/MobileMenuModal";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const root = document.documentElement; // <html>
+    if (isDark) root.classList.add("dark");
+    else root.classList.remove("dark");
+  }, [isDark]);
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
@@ -15,8 +22,14 @@ function App() {
   }, [isMenuOpen]);
 
   return (
-    <div className="flex">
-      <Sidebar />
+    <div
+      className={`flex min-h-screen bg-gradient-to-br ${
+        isDark
+          ? "from-black via-gray-900 to-gray-800"
+          : "from-white via-gray-50 to-gray-200"
+      }`}
+    >
+      <Sidebar isDark={isDark} onToggleTheme={() => setIsDark(!isDark)} />
 
       <MenuButton
         isOpen={isMenuOpen}

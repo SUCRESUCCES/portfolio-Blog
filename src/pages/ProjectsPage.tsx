@@ -16,7 +16,7 @@ function ProjectsPage() {
 
   return (
     <section className="w-full max-w-6xl mx-auto py-12 px-4">
-      <h2 className="text-4xl font-extrabold text-gray-900 mb-10 text-center">
+      <h2 className="text-4xl font-extrabold mb-10 text-center text-gray-900 dark:text-white">
         PROJECT
       </h2>
 
