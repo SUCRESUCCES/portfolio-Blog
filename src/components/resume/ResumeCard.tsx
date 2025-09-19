@@ -26,6 +26,7 @@ const trainingData = [
 
 const certificationData = [
   { date: "2024.09", name: "컴퓨터활용능력 2급", issuer: "대한상공회의소" },
+  { date: "2025.09", name: "SQL 개발자", issuer: "한국데이터산업진흥원" },
 ];
 
 const experienceData = [
