@@ -22,11 +22,18 @@ const trainingData = [
     course: "디지털컨버전스 공공데이터 융합 자바개발자 양성과정",
     attendance: "99.1%",
   },
+  {
+    period: "2025.10.20 ~ 2025.12.29",
+    institution: "이스트소프트 X AWS",
+    course: "AI 융합교육기반 프로그램 - 오르미캠프",
+    attendance: "100%",
+  },
 ];
 
 const certificationData = [
   { date: "2024.09", name: "컴퓨터활용능력 2급", issuer: "대한상공회의소" },
-  { date: "2025.09", name: "SQL 개발자", issuer: "한국데이터산업진흥원" },
+  { date: "2025.09", name: "SQLD", issuer: "한국데이터산업진흥원" },
+  { date: "2026.01", name: "AI Practitioner - Foundational ", issuer: "AWS" },
 ];
 
 const experienceData = [
