@@ -2,7 +2,6 @@ import React from "react";
 import SectionCard from "../common/SectionCard";
 
 const resumeData = {
-  // 학력: 이미지 데이터 100% 일치
   education: [
     {
       date: "2025.03 ~ 현재",
@@ -19,7 +18,6 @@ const resumeData = {
       status: "졸업",
     },
   ],
-  // 교육: 이미지 데이터 100% 일치
   training: [
     {
       date: "2024.10.07 ~ 2025.03.27",
