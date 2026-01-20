@@ -1,6 +1,6 @@
 import React from "react";
+import SectionCard from "../common/SectionCard";
 
-// 아이콘을 포함한 데이터 구조로 만들기
 const personalInfo = [
   { label: "이름", value: "조민주" },
   { label: "연락처", value: "010-8551-8924" },
@@ -15,27 +15,26 @@ const personalInfo = [
 
 function AboutCard() {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8 sm:p-12 w-full max-w-4xl">
-      <h2 className="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">
-        About Me
-      </h2>
-
-      <div className="space-y-6">
+    <SectionCard title="About" titleHighlight="Me">
+      <div className="space-y-8">
         {personalInfo.map((info) => (
-          <div key={info.label} className="flex flex-col sm:flex-row">
-            <div className="w-full sm:w-32 font-semibold text-gray-500 mb-1 sm:mb-0">
+          <div
+            key={info.label}
+            className="flex flex-col sm:flex-row items-start sm:items-center"
+          >
+            <div className="w-full sm:w-32 font-semibold text-gray-500 dark:text-gray-400 mb-2 sm:mb-0 text-sm uppercase tracking-wider">
               {info.label}
             </div>
-
-            <div className="flex-1 text-gray-800">
+            <div className="flex-1 text-gray-800 dark:text-gray-200 font-medium text-lg">
               {info.link ? (
                 <a
                   href={info.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline transition-colors"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 underline-offset-4 hover:underline transition-all inline-flex items-center gap-1"
                 >
                   {info.value}
+                  <span className="text-xs">↗</span>
                 </a>
               ) : (
                 info.value
@@ -44,7 +43,7 @@ function AboutCard() {
           </div>
         ))}
       </div>
-    </div>
+    </SectionCard>
   );
 }
 
