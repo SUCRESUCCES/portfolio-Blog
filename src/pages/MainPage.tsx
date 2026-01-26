@@ -20,9 +20,12 @@ function MainPage() {
   const handleCloseModal = () => setSelectedProject(null);
 
   return (
-    <div className="text-gray-900 dark:text-gray-100">
+    <div className="text-gray-900 dark:text-gray-100 min-h-screen">
       {/* HOME */}
-      <section id="home" className="w-full flex justify-center py-20 px-4">
+      <section
+        id="home"
+        className="w-full flex justify-center pt-48 pb-32 px-4 min-h-[60vh] items-center"
+      >
         <div className="w-full max-w-3xl mx-auto">
           <Profile />
         </div>
@@ -51,12 +54,13 @@ function MainPage() {
       {/* PROJECTS */}
       <section
         id="projects"
-        className="w-full flex justify-center py-20 px-4 bg-transparent"
+        className="w-full flex justify-center py-20 px-4 pt-32 bg-transparent overflow-visible"
       >
-        <div className="w-full max-w-5xl mx-auto">
-          <h2 className="text-4xl font-extrabold mb-12 text-center text-gray-900 dark:text-white">
+        <div className="w-full max-w-5xl mx-auto overflow-visible">
+          <h2 className="text-4xl font-extrabold mb-16 text-center text-gray-900 dark:text-white">
             Projects
           </h2>
+
           <ProjectList onCardClick={handleCardClick} />
         </div>
       </section>
